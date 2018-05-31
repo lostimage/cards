@@ -75,11 +75,12 @@ textarea {
 	position: relative;
 	width: 200px;
 	height: 300px;
-	transition: transform 1.5s ease-in-out;
+	transition: transform 3.5s ease-in-out;
 	transform-style: preserve-3d;
 	margin:10px;
+	transform: perspective(1000px);
 	&:hover {
-		transform: rotateY(180deg);
+		transform: rotateY(180deg) perspective(1000px);
 	}
 	&__front {
 		position: absolute;
@@ -107,7 +108,7 @@ textarea {
 		bottom: 0;
 		left: 0;
 		border:2px solid #fff;
-		transform: rotateY(180deg);
+		transform: rotateY(-180deg);
 		backface-visibility: hidden;
 		border-radius: 20px;
 		background-size: cover;
